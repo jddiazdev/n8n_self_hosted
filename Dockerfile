@@ -1,7 +1,9 @@
 
-# Official n8n image
 FROM n8nio/n8n:latest
 
-# Expose n8n port
 EXPOSE 5678
 
+ENV N8N_PORT=5678
+ENV N8N_LISTEN_ADDRESS=0.0.0.0
+
+CMD ["n8n", "start"]
